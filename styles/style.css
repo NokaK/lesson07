@@ -1,0 +1,165 @@
+* {
+	margin: 0;
+	padding:  0;
+	box-sizing: border-box;
+}
+body {
+	font-size: 16px;
+}
+.container {
+	max-width: 1100px;
+	width: 100%;
+	margin:0 auto;
+}
+.box-image{
+	width: 100%;
+}
+.box {
+	position: relative;
+}
+.box-text {
+	font-size: 1.5rem;
+	position: absolute;
+	top:  50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 300px;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #000;
+	transition-property: all;
+	transition-delay: 0.5s; /*რამდენ ხანში დაიწყოს*/
+	transition-duration: 3s; /*რამდენ ხანს გაგრძელდეს*/
+	transition-timing-function: linear ;
+}
+.box-text:hover{
+	color: red;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 500px;
+
+}
+
+.background {
+	position:  relative;
+	background-image: url('../images/view.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 70vh;
+	width:  100%;
+	transition: all 0.5s linear 3s;
+}
+.background:hover {
+	background-image: url('../images/background.jpeg');
+	background-position: top left;
+}
+h1 {
+	color: white;
+	font-size: 40px;
+}
+.animation {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-image: url('../images/view.jpeg');
+	background-position: center;
+	background-size: cover;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	animation-name: myMove;
+	animation-duration: 5s;
+	animation-delay: 0.5s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-fill-mode: backwards;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes myMove {
+	0% {
+		top :150px;
+		left: 150px;
+		opacity: 1;
+	}
+	20% {
+		top:  250px;
+		left: 250px;
+	}
+	40% {
+		top: 350px;
+		left: 350px;
+		width: 250px;
+		opacity: 0.6;
+	}
+	60% {
+		top: 450px;
+		left: 450px;
+		background-image: url('../images/background.jpeg');
+		transform: rotate(45deg);
+		border-radius: 0;
+		/*width:  250px;*/
+	}
+	80% {
+		top: 550px;
+		left: 550px;
+		/*opacity: 0.3;*/
+	}
+	100% {
+		top: 650px;
+		left: 650px;
+		/*opacity: 0.5;*/
+	}
+}
+
+.second-anim {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-image: url('../images/view.jpeg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	animation-name: myMove2;
+	animation-duration: 5s;
+	animation-delay: 0.5s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-fill-mode: backwards;
+	animation-iteration-count: infinite;
+}
+
+@keyframes myMove2  {
+	0% {
+		bottom: 150px;
+		right: 150px;
+		opacity: 1;
+	}
+	20% {
+		bottom:  250px;
+		right: 250px;
+	}
+	40% {
+		bottom: 350px;
+		right: 350px;
+		width: 250px;
+		opacity: 0.6;
+	}
+	60% {
+		bottom: 450px;
+		right: 450px;
+		background-image: url('../images/background.jpeg');
+		/*width:  250px;*/
+		transform: scale(2);
+	}
+	80% {
+		bottom: 550px;
+		right: 550px;
+		/*opacity: 0.3;*/
+	}
+	100% {
+		bottom: 650px;
+		right: 650px;
+		/*opacity: 0.5;*/
+	}
+}
